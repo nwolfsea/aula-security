@@ -19,7 +19,7 @@ public class UsuarioController {
     @PostMapping("/")
     @ResponseStatus(HttpStatus.CREATED)
     public void cadastrarUsuario(@RequestBody @Valid CadastroUsuarioDTO usuario){
-        usuarioService.salvarUsuario(usuario.converterDTOParaModel());
+        usuarioService.cadastrarNovoUsuario(usuario.converterDTOParaModel());
     }
 
     @GetMapping("/")
